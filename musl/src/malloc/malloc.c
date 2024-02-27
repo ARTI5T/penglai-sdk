@@ -349,7 +349,7 @@ static size_t mal0_clear(char *p, size_t pagesz, size_t n)
 	}
 }
 
-/*void *calloc(size_t m, size_t n)
+void *calloc(size_t m, size_t n)
 {
 	if (n && m > (size_t)-1/n) {
 		errno = ENOMEM;
@@ -365,7 +365,7 @@ static size_t mal0_clear(char *p, size_t pagesz, size_t n)
 			n = mal0_clear(p, PAGE_SIZE, n);
 	}
 	return memset(p, 0, n);
-}*/
+}
 
 void *realloc(void *p, size_t n)
 {
